@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Container, Grid } from 'semantic-ui-react'
+import DefaultLayout from '../layouts'
 
 interface IndexPageProps {
   data: {
@@ -18,14 +19,15 @@ export default class extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <div>
+        <DefaultLayout />
         <Container>
           <Grid>
             <Grid.Column width={8} verticalAlign="middle">
               <h1>Empower Educators and Learners</h1>
-              <h2>
-                An education platform that just works. Cost-effective, fast and
-                open-source.
-              </h2>
+              <h3>
+                You need an education platform that just works. Cost-effective,
+                fast and open-source.
+              </h3>
             </Grid.Column>
             <Grid.Column width={8}>
               <img
