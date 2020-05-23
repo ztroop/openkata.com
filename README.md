@@ -1,0 +1,2 @@
+# openkata.com
+Openkata homepage

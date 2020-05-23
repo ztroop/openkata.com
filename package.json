@@ -1,0 +1,36 @@
+{
+  "name": "openkata-homepage",
+  "description": "Openkata homepage.",
+  "version": "1.0.0",
+  "author": "Zackary Troop <ztroop@openkata.com>",
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/react": "^1.6.4",
+    "@types/node": "^8.0.7",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "0.14.23",
+    "@types/react-helmet": "^5.0.15",
+    "@types/semantic-ui": "^2.2.7",
+    "gatsby": "^1.9.119",
+    "gatsby-link": "^1.6.28",
+    "gatsby-plugin-mdx": "^1.2.12",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-typescript": "^1.4.10",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2"
+  },
+  "keywords": [
+    "gatsby, typescript"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.8.2"
+  }
+}
