@@ -20,16 +20,20 @@ export default class extends React.Component<IndexPageProps, {}> {
       <div>
         <Container>
           <Grid>
-            <Grid.Column width={8} verticalAlign='middle'>
-              <h1>
-                Empower Educators & Learners
-              </h1>
+            <Grid.Column width={8} verticalAlign="middle">
+              <h1>Empower Educators and Learners</h1>
               <h2>
-                An education platform that just works. Cost-effective, fast and open-source.
+                An education platform that just works. Cost-effective, fast and
+                open-source.
               </h2>
             </Grid.Column>
-            <Grid.Column width={8}>          
-              <img src={'/img/splash.svg'} height="100%" width="100%" alt="Logo" />
+            <Grid.Column width={8}>
+              <img
+                src={'/img/splash.svg'}
+                height="100%"
+                width="100%"
+                alt="Logo"
+              />
             </Grid.Column>
           </Grid>
         </Container>
@@ -37,13 +41,3 @@ export default class extends React.Component<IndexPageProps, {}> {
     )
   }
 }
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

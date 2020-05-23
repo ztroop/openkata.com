@@ -3,23 +3,29 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { Container, Grid, List } from 'semantic-ui-react'
 
-import "semantic-ui-css/semantic.min.css"
+import 'semantic-ui-css/semantic.min.css'
 
 const Header = () => (
   <div>
     <br></br>
-    <Container textAlign='left'>
+    <Container textAlign="left">
       <Grid>
         <Grid.Column width={12}>
-          <Link to="/"><img src={'/img/logo.svg'} height="35%" width="35%" alt="Logo" /></Link>
+          <Link to="/">
+            <img src={'/img/logo.svg'} height="35%" width="35%" alt="Logo" />
+          </Link>
         </Grid.Column>
         <Grid.Column width={4}>
           <List horizontal>
-            <List.Item><Link to="/">home</Link></List.Item>
-            <List.Item><Link to="/blog">blog</Link></List.Item>
+            <List.Item>
+              <Link to="/">home</Link>
+            </List.Item>
+            <List.Item>
+              <Link to="/blog">blog</Link>
+            </List.Item>
           </List>
         </Grid.Column>
-      </Grid> 
+      </Grid>
     </Container>
   </div>
 )
