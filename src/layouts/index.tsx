@@ -1,37 +1,36 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
-import { Container, Grid, List } from 'semantic-ui-react'
+import { Menu, Container } from 'semantic-ui-react'
 
 import 'semantic-ui-css/semantic.min.css'
 
-const Header = () => (
-  <div>
-    <br></br>
-    <Container textAlign="left">
-      <Grid>
-        <Grid.Column width={14}>
-          <Link to="/">
-            <img src={'/img/logo.svg'} height="35%" width="35%" alt="Logo" />
-          </Link>
-        </Grid.Column>
-        <Grid.Column width={2}>
-          <List horizontal>
-            <List.Item>
-              <Link to="/">home</Link>
-            </List.Item>
-            <List.Item>
-              <Link to="/blog">blog</Link>
-            </List.Item>
-          </List>
-        </Grid.Column>
-      </Grid>
-    </Container>
-  </div>
-)
+import './openkata.scss'
 
 const DefaultLayout = () => (
   <div>
-    <Header />
+    <br></br>
+    <Container>
+      <Menu secondary>
+        <img
+          id="pix"
+          src={'/img/logo.svg'}
+          height="20%"
+          width="20%"
+          alt="Logo"
+        />
+        <Menu.Menu position="right">
+          <Menu.Item>
+            <Link to="/">home</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/blog">blog</Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link to="/docs">docs</Link>
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
+    </Container>
   </div>
 )
 
