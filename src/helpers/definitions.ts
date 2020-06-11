@@ -6,6 +6,6 @@ export type ImageSharpFixed = FixedObject | FixedObject[] | undefined
 export type ObjectType = Record<string, any>
 
 export interface SectionTitle {
-  title: string
-  subtitle: string
+    title: string
+    subtitle: string
 }
