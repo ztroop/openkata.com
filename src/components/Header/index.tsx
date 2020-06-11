@@ -5,20 +5,20 @@ import MainNav from './MainNav'
 import * as Styled from './styles'
 
 interface Props {
-    siteTitle: string
+  siteTitle: string
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => (
-    <Styled.Header>
-        <Styled.Wrapper>
-            <Logo />
-            <MainNav />
-        </Styled.Wrapper>
-    </Styled.Header>
+  <Styled.Header>
+    <Styled.Wrapper>
+      <Logo />
+      <MainNav />
+    </Styled.Wrapper>
+  </Styled.Header>
 )
 
 Header.defaultProps = {
-    siteTitle: ``,
+  siteTitle: ``,
 }
 
 export default Header
