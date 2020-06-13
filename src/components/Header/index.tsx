@@ -8,7 +8,7 @@ interface Props {
   siteTitle: string
 }
 
-const Header: React.FC<Props> = ({ siteTitle }) => (
+const Header: React.FC<Props> = () => (
   <Styled.Header>
     <Styled.Wrapper>
       <Logo />

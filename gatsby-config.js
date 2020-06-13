@@ -22,11 +22,11 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 768,
               linkImagesToOriginal: false
@@ -53,6 +53,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-tailwindcss`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

@@ -27,7 +27,7 @@ const HeroBanner: React.FC = () => {
         <Styled.HeroSection>
           <Styled.WowText>Empower Education</Styled.WowText>
           <Styled.WowSubText>
-            Improving IT Learning Environments
+            Learning Environments with Open Source Software
           </Styled.WowSubText>
         </Styled.HeroSection>
         <Styled.HeroSection>
