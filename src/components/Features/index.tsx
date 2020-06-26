@@ -2,65 +2,53 @@ import Container from 'components/UI/Container'
 import { IconProps } from 'components/UI/Icon'
 import InfoBlock from 'components/UI/InfoBlock'
 import TitleSection from 'components/UI/TitleSection'
-import { graphql, useStaticQuery } from 'gatsby'
-import { SectionTitle } from 'helpers/definitions'
 import React from 'react'
 
 import * as Styled from './styles'
 
-interface Feature {
-  node: {
-    id: string
-    frontmatter: {
-      title: string
-      icon: IconProps
-      description: string
-    }
-  }
+interface FeatureSegment {
+  title: string
+  icon: IconProps
+  description: string
 }
 
 const Features: React.FC = () => {
-  const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
-    query {
-      markdownRemark(frontmatter: { category: { eq: "features section" } }) {
-        frontmatter {
-          title
-        }
-      }
-      allMarkdownRemark(
-        filter: { frontmatter: { category: { eq: "features" } } }
-        sort: { fields: fileAbsolutePath }
-      ) {
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              icon
-              description
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const sectionTitle: SectionTitle = markdownRemark.frontmatter
-  const features: Feature[] = allMarkdownRemark.edges
+  const features: FeatureSegment[] = [
+    {
+      title: 'Cost Savings',
+      icon: 'lightbulb',
+      description: 'Affordable pricing options for a hosted platform.',
+    },
+    {
+      title: 'Flexibility',
+      icon: 'draw-polygon',
+      description: 'Configurable lab environment options.',
+    },
+    {
+      title: 'Easy to Use',
+      icon: 'magic',
+      description: 'Easy to deploy classroom environments and resources.',
+    },
+    {
+      title: 'Learning Paths',
+      icon: 'laptop-code',
+      description:
+        'Learning tracks for software development and security topics.',
+    },
+  ]
 
   return (
     <Container>
-      <TitleSection title={sectionTitle.title} center />
+      <TitleSection title="Features" center />
       <Styled.Features>
         {features.map((item) => {
-          const {
-            id,
-            frontmatter: { title, icon, description },
-          } = item.node
-
           return (
-            <Styled.FeatureItem key={id}>
-              <InfoBlock icon={icon} title={title} content={description} />
+            <Styled.FeatureItem>
+              <InfoBlock
+                icon={item.icon}
+                title={item.title}
+                content={item.description}
+              />
             </Styled.FeatureItem>
           )
         })}
