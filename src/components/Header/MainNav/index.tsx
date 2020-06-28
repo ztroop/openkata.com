@@ -16,6 +16,10 @@ const mainNavItems: MainNavItem[] = [
     title: 'blog',
     slug: '/blog/',
   },
+  {
+    title: 'docs',
+    slug: '/docs/',
+  },
 ]
 
 const MainNav: React.FC = () => {
